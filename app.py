@@ -6,6 +6,14 @@ import pickle
 with open('random_forest_model.pkl', 'rb') as file:
     model = pickle.load(file)
 
+# try:
+#     with open('random_forest_model.pkl', 'rb') as file:
+#         model = pickle.load(file)
+# except FileNotFoundError:
+#     st.error("Model file not found. Please make sure 'random_forest_model.pkl' exists.")
+# except Exception as e:
+#     st.error(f"An error occurred while loading the model: {e}")
+
 st.title('Bank Term Deposit Subscription Prediction')
 
 st.write('Fill out the following information to predict whether a customer at the bank will subscribe to the term deposit or not')
